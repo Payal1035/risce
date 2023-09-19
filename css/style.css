@@ -1010,4 +1010,55 @@ a:focus {
 .footer_section p a {
   color: inherit;
 }
+.dates{
+  margin-top: 5rem;
+}
+.logocontrol {
+	/* background-image: url(../images/theme.jpg); */
+	margin-left:auto;
+	margin-right:auto;
+	
+}
+.section-header {
+  margin-bottom: 60px;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.section-header::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 5px;
+  background: #f82249;
+  bottom: 0;
+  left: calc(50% - 25px);
+}
+
+.section-header h2 {
+  font-size: 36px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.section-header p {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #9195a2;
+}
+
+.section-with-bg {
+  background-color: #f6f7fd;
+  
+}
+.navb {
+  border-right: 1px solid;
+  padding-top: 2px;
+}
 /*# sourceMappingURL=style.css.map */
