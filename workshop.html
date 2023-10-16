@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>risce</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="style.css" rel="stylesheet">
+
+
+
+    <!-- <style type="text/css">
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        #mySidenav {
+            position: fixed;
+            right: 0px;
+            top: 200px;
+
+            background: rgb(53, 104, 151, 0.2);
+            border: solid thin #1f4c75;
+            transition: 0.3s;
+            padding: 10px;
+            width: 120px;
+
+            text-decoration: none;
+            font-size: 16px;
+            color: black;
+            font-weight: bold;
+            border-radius: 10px 0 0 10px;
+            z-index: 111111;
+            -webkit-animation: glowing 1500ms infinite;
+            -moz-animation: glowing 1500ms infinite;
+            -o-animation: glowing 1500ms infinite;
+            animation: glowing 1500ms infinite;
+
+        }
+    </style> -->
+
+
+
+</head>
+
+<body>
+
+
+    <!-- <section style="background-image: url(assets/img/footer.jpg); padding-top: 0px;">
+        <style type="text/css">
+            .countdown {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                width: 100%;
+                max-width: 40rem;
+                margin: 0 auto;
+
+                color: black;
+            }
+
+            .countdown__item {
+                display: flex;
+                flex-direction: column;
+                flex: 0 1 auto;
+                min-width: 25%;
+                /*margin-bottom: 1rem;*/
+
+
+
+                .countdown__item--large {
+                    flex: auto;
+                    width: 100%;
+                    font-size: 2.75em;
+                }
+
+                .countdown__timer {
+                    padding: 1px;
+                    border: 1px rgb(0, 0, 0);
+                    border-radius: 2px;
+                    font-weight: bold;
+                    font-size: 21px;
+                    text-align: center;
+
+                    color: #070707;
+                    border-radius: 25px;
+                }
+
+                .countdown__label {
+                    text-align: center;
+                    font-size: 15px;
+                    color: #070707;
+                }
+
+                .countdown__item--large & {
+
+                    display: block;
+                    height: 1px;
+                    background-image: linear-gradient(left,
+                            rgba(0, 0, 0, 0),
+                            rgba(0, 0, 0, .4),
+                            rgba(0, 0, 0, 0));
+                }
+
+            }
+        </style>
+
+
+
+
+
+
+    </section>
+
+
+    <div id="mySidenav">
+        <div class="countdown" id="js-countdown">
+            <div class="countdown__item countdown__item">
+                <div class="countdown__label" id="day-countdown">Days to go</div>
+                <div class="countdown__timer js-countdown-days" aria-labelledby="day-countdown">
+
+                </div>
+
+
+            </div> -->
+
+
+
+
+
+
+            <script type="text/javascript">
+                // ========================== //
+                // 2017 Countdown JS
+                // ========================== //
+
+                const countdown = new Date("December 1, 2024");
+
+                function getRemainingTime(endtime) {
+                    const milliseconds = Date.parse(endtime) - Date.parse(new Date());
+                    const seconds = Math.floor((milliseconds / 1000) % 60);
+                    const minutes = Math.floor((milliseconds / 1000 / 60) % 60);
+                    const hours = Math.floor((milliseconds / (1000 * 60 * 60)) % 24);
+                    const days = Math.floor(milliseconds / (1000 * 60 * 60 * 24));
+
+                    return {
+                        'total': milliseconds,
+                        'seconds': seconds,
+                        'minutes': minutes,
+                        'hours': hours,
+                        'days': days,
+                    };
+                }
+
+                function initClock(id, endtime) {
+                    const counter = document.getElementById(id);
+                    const daysItem = counter.querySelector('.js-countdown-days');
+                    const hoursItem = counter.querySelector('.js-countdown-hours');
+                    const minutesItem = counter.querySelector('.js-countdown-minutes');
+                    const secondsItem = counter.querySelector('.js-countdown-seconds');
+
+                    function updateClock() {
+                        const time = getRemainingTime(endtime);
+
+                        daysItem.innerHTML = time.days;
+                        hoursItem.innerHTML = ('0' + time.hours).slice(-2);
+                        minutesItem.innerHTML = ('0' + time.minutes).slice(-2);
+                        secondsItem.innerHTML = ('0' + time.seconds).slice(-2);
+
+                        if (time.total <= 0) {
+                            clearInterval(timeinterval);
+                        }
+                    }
+
+                    updateClock();
+                    const timeinterval = setInterval(updateClock, 1000);
+                }
+
+                initClock('js-countdown', countdown);
+
+
+            </script>
+        </div>
+    </div>
+    </div>
+    </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- Carousel Start -->
+    <div id="carousel" class="carousel slide" data-ride="carousel" style="margin-top:0px;">
+        <div class="carousel-inner">
+
+
+            <div class="carousel-item active">
+                <img src="images/sanjaysukla.jpeg" class="img-fluid" alt="Carousel Image" class="logocontrol"
+                    style=" background-position:center; background-size: cover;">
+
+                <h6><strong>Post Conference</strong><br> Workshop(RISCE2024) <br>on <span
+                        style="font-weight: bolder;">Seven Research Mantras</span>: A Guide for Researchers</h6>
+            </div>
+
+        </div>
+
+
+    </div>
+    <!-- Carousel End -->
+
+
+
+
+
+    </div>
+
+
+
+
+    <div class="about wow fadeInUp" data-wow-delay="0.1s">
+
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 col-md-12 mt-5">
+
+                    <div class="about-text">
+                        <p style="align-items: center;">
+                            Many researchers face difficulties or delays in getting their research articles accepted for
+                            publication in research journals, and their several submitted research articles are often
+                            rejected. For those who are enrolled in research degree programs such as Master by Research
+                            (MBR) or Doctor of Philosophy (PhD), a delay in publication of the research articles or
+                            their rejection causes several problems, including mental/health-related issues, for them
+                            and their research teams. This kind of situation is natural when the researchers lack proper
+                            understanding of research problem, research process and expected research outcomes with
+                            significant originality and novelty. On many occasions, most researchers experience that the
+                            weakness in the presentation becomes the main cause of publication delay or rejection.
+
+                        </p>
+
+                        <ul style="text-align:left; line-height:26px;">
+
+                            <li><Strong>Mantra #1:</Strong> Define a new problem for its possible solution, or work on a
+                                known problem
+                                for its new or improved solution. </li>
+                            <li><Strong>Mantra #2:</Strong> Do your experimental and/or mathematical works with great
+                                accuracy and precision. </li>
+                            <li><Strong>Mantra #3:</Strong> Prepare the list of assumptions and/or limitations of your
+                                completed research work as applicable with a suitable discussion in the article. </li>
+                            <li><Strong>Mantra #4:</Strong> Try to explain the mechanism(s) of your research
+                                observations and findings, as possible, and attempt to develop scientific theory,
+                                equation/expression, design chart or design table for field applications.</li>
+                            <li><Strong>Mantra #5:</Strong> Compare your new/improved research findings and solutions
+                                with currently available ones, if any, with a critical discussion.</li>
+                            <li><Strong>Mantra #6:</Strong>Describe your research work in the article using short and
+                                clear sentences in simple and plain English, and avoid any kind of errors, including
+                                grammatical and presentation errors. </li>
+                            <li><Strong>Mantra #7:</Strong> At any stage of research process, there should not be any
+                                rush that can cause errors in your research outcomes and their publications. </li>
+
+                        </ul>
+
+                    </div>
+
+
+
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <img src="images/sanjaysukla.jpeg">
+                            </div>
+                            <div class="col-lg-9">
+                                <div class="card" style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Dr. Sanjay Kumar Shukla
+                                        </h5>
+                                        <p class="card-text">Editor-in-Chief, International Journal of Geosynthetics and
+                                            Ground Engineering.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <table width="100%" cellpadding="0" cellspacing="0" class="table"
+                        style="margin-bottom: 30px; margin-top:30px; align-items: center;">
+                        <thead>
+                            <tr>
+                                <th style="background-color: #4ae5fa;">
+                                    <div class="style4" style="padding:10px 0px 0px 0px; align-items: center;"><span
+                                            style="color:#FFF"> Delegate Category
+                                        </span>
+                                    </div>
+                                </th>
+
+                                <th style="background-color: #a2f0fa;">
+                                    <div class="style4" style="align-items: center;">
+                                        <div><span style="color:#FFF ">
+                                                Up to November 2024 </span>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th style="background-color: #4ae5fa;">
+                                    <div class="style4">
+                                        <div><span style="color:#FFF"> After 31 November 2024
+                                            </span>
+                                        </div>
+                                    </div>
+                                </th>
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr>
+                                <td data-label="Consultant">
+                                    <div> Students
+                                        (Indian subcontinent)</div>
+                                </td>
+
+                                <td data-label="Residents / Postgraduates">
+                                    <div>₹ 500 </div>
+                                </td>
+                                <td data-label="Residents / Postgraduates">
+                                    <div>₹ 500 </div>
+                                </td>
+
+
+                            </tr>
+
+                            <tr>
+                                <td data-label="Consultant">
+                                    <div>Faculty/Scientist/Post Doc </div>
+                                </td>
+
+                                <td data-label="Residents / Postgraduates">
+                                    <div>₹ 500 </div>
+                                </td>
+                                <td data-label="Residents / Postgraduates">
+                                    <div>₹ 500</div>
+                                </td>
+
+
+                            </tr>
+
+                            <tr>
+                                <td data-label="Consultant">
+                                    <div> Industry Practitioners
+                                    </div>
+                                </td>
+
+                                <td data-label="Residents / Postgraduates">
+                                    <div> ₹ 500 </div>
+                                </td>
+                                <td data-label="Residents / Postgraduates">
+                                    <div> ₹ 600</div>
+                                </td>
+
+                                </td>
+
+                            </tr>
+
+                            <tr>
+                                <td data-label="Consultant">
+                                    <div> Foreign students
+                                        (Retired)
+
+                                    </div>
+                                </td>
+
+                                <td data-label="Residents / Postgraduates">
+                                    <div> USD 50 </div>
+                                </td>
+                                <td data-label="Residents / Postgraduates">
+                                    <div> USD 50 </div>
+                                </td>
+
+                                </td>
+                            </tr>
+
+
+
+                            <tr>
+                                <td data-label="Consultant">
+                                    <div> Foreign
+                                        faculty/professionals
+
+                                    </div>
+                                </td>
+
+                                <td data-label="Residents / Postgraduates">
+                                    <div> USD 50 </div>
+                                </td>
+                                <td data-label="Residents / Postgraduates">
+                                    <div> USD 50 </div>
+                                </td>
+
+                            </tr>
+
+                    </table>
+
+
+
+                </div>
+
+                <div class="col-lg-4 col-md-12 mt-5 align-top">
+
+                    <!-- <div class="col-lg-12 text-center mb-5">
+                        <img src="img/geo-soft.jpg" class="img-fluid">
+                    </div> -->
+
+                    <div class="col-lg-12 mb-5 text-center"
+                        style="background-color: #fbe5d6; padding:10px; color:#495274;">
+                        <p> These mantras should be chanted during all the stages of the research journey, including
+                            research planning, execution, publication, and implementation in real-life projects. It is
+                            expected that these mantras may greatly help the researchers and the innovators, especially
+                            the early-career ones, working in any subject area, for making their research and innovation
+                            journey successful and enjoyable.! </p>
+                    </div>
+
+
+
+                    <div class="col-lg-12 text-center mb-5"
+                        style="background-color: #c5e0b4; padding:10px; color:#83680b;">
+                        <p> Who Should Attend?<br>
+                             Engineers and
+                            Researchers </p>
+                    </div>
+
+
+
+                    <div class="col-lg-12 text-center mb-5"
+                        style="background-color: #c5e0b4; padding:10px; color:#83680b;">
+                        <p> Registration Link <br>
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfkhrDw2zwLcuWXJ_1Ns37JQLx-GMAhSsCUgWBQRpBfvnKhCw/viewform?pli=1"
+                                target="blank" style="color:#0d2d77;"> https://forms.gle/
+                                jbjbhbjh </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-lg-12 text-center mb-5" style="padding: 10px; color: #010101; border: solid thin #010101;">
+                        <div class="row align-items-center">
+                            <div class="col-md-12">
+                                <p style="max-width: 100%;">
+                                    <strong>For more details, contact:</strong><br>
+                                    Dr. Abhijit Anand, RISCE 2024<br>
+                                    Workshop Coordinator<br>
+                                    Assistant Professor<br>
+                                    Civil Engineering Department<br>
+                                    BIT SINDRI DHANBAD<br><br>
+                                    <a href="email.email@gmail.com" style="color: #010101;">email.email@gmail.com</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                      
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- org committee End -->
+
+
+    </div>
+
+    </div>
+</body>
+
+</html>
