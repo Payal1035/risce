@@ -1424,3 +1424,72 @@ tr + tr {
     max-width: none;
   }
 }
+
+/* workshop page _Dharmveer */
+
+body {
+    color: #666666;
+    background: #ffffff /*#dddddd*/;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+  }
+  
+  h1,
+  h2, 
+  
+  h3, 
+  h4,
+  h5, 
+  h6 {
+    color: #030f27;
+  }
+  
+  a {
+    color: #ffffff;
+    transition: .3s;
+  }
+  
+ 
+  .btn {
+    transition: .3s;
+  }
+  
+  
+ 
+  
+  /*******************************/
+  /******** Carousel CSS *********/
+  /*******************************/
+  .carousel {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 0px !important;
+  }
+  
+  .carousel .carousel-inner,
+  .carousel .carousel-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .carousel .carousel-item img {
+  
+    object-fit: fill;
+  }
+  
+  .carousel .carousel-item::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /*background: rgba(0, 0, 0, .3);*/
+    z-index: 1;
+  }
+  
+ 
