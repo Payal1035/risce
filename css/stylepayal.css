@@ -5,6 +5,8 @@ body {
   overflow-x: hidden;
 }
 
+
+
 .layout_padding {
   padding: 90px 0;
 }
@@ -273,6 +275,12 @@ a:focus {
   color: #ffffff;
   font-weight: 800;
 }
+
+.nav-item .active{
+  text-decoration: underline;
+  font-weight: 800;
+}
+
 
 .custom_nav-container .nav_search-btn {
   width: 35px;
@@ -802,6 +810,77 @@ right: 0;
 .contact_section {
   position: relative;
   background-color: #f9f9f9;
+  
+}
+.contact_section .detail{
+  margin-top: 5rem;
+  width: 100%;
+  margin-left: 2rem;
+}
+
+
+.contact_section .detail .head{
+  width: 100%;
+  font-size: 2.2rem;
+  font-family: 'FontAwesome';
+  
+}
+
+.contact_section .detail .detail_body{
+  width: max-content;
+  display: flex;
+  border: 2px solid black;
+  box-shadow: 5px 10px rgba(194, 215, 219, 0.7);
+  border-radius: 27px 23px 4px 27px;;
+}
+
+.contact_section .detail .detail_body:hover {
+  box-shadow: inset 0 0 10px 0px rgba(194, 215, 219, 0.7); 
+  cursor: pointer;
+}
+
+.contact_section .detail .detail_body .icon{
+  padding: 4px 12px;
+  background-color: #d5d4d4;
+  border-radius: 50%;
+  font-size: 29px;
+  
+}
+
+.contact_section .detail .detail_body .body_id{
+  margin: 15px;
+  font-size: 20px;
+}
+
+.contact_section .detail .contact {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.contact_section .detail .contact .head {
+  padding-bottom: 1.5rem;
+}
+
+.contact_section .detail .contact .names .detail_body{
+  margin-bottom: 2rem ;
+}
+
+.contact_section .detail .contact .photo{
+  padding: 6px;
+
+}
+
+.contact_section .detail .contact .photo img{
+  width: 80px;
+  height: 80px;
+  border-radius: 20%;
+  
+}
+
+.contact_section .detail .names{
+  /* display: flex; */
+  width: 100%;
+  column-count: 2;
 }
 
 .contact_section .heading_container {
@@ -1110,3 +1189,27 @@ right: 0;
   color: inherit;
 }
 /*# sourceMappingURL=style.css.map */
+
+/*****Venue Editing******/
+.venue{
+  
+  /* margin-top: 6rem; */
+}
+
+.venue .parts{
+  display: flex;
+  
+}
+
+.venue_images img{
+  height: 12rem;
+  width: 12rem;
+  padding: 6px;
+}
+
+
+.map{
+  width: 55vw;
+  height: 550px;
+  margin-top: 6rem;
+}

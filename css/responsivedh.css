@@ -1,7 +1,6 @@
 @media (max-width: 1300px) {
-  .custom_nav-container .navbar-nav .nav-item .nav-link{
+  .custom_nav-container .navbar-nav .nav-item .nav-link {
     padding: 5px 15px;
-    font-size: 14px;
   }
 
   .about_section .row{
@@ -41,8 +40,8 @@
 
 
   .custom_nav-container .navbar-nav .nav-item .nav-link {
-    padding: 5px 8px;
-    /* margin: 5px 0; */
+    padding: 5px 15px;
+    margin: 5px 0;
   }
 
   .slider_section .detail-box h1 {
@@ -97,15 +96,6 @@
     /* display: flex; */
     width: 100%;
     column-count: 1;
-  }
-
-  .venue .parts{
-    display: block;
-  }
-  .map{
-    width: 100vw;
-    height: 550px;
-    margin-top: 1rem;
   }
 }
 
