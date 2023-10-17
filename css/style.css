@@ -1461,8 +1461,8 @@ body {
   /******** Carousel CSS *********/
   /*******************************/
   .carousel {
-    position: relative;
-    width: 100%;
+    position: relative !important;
+    width: 100% !important;
     margin: 0 auto;
     text-align: center;
     overflow: hidden;
@@ -1492,4 +1492,296 @@ body {
     z-index: 1;
   }
   
+  /* PAper submission */
+  * Style for the container */
+.elementor-container {
+  background-color: #fff;
+  border-radius: 10px;
+  /* padding: 20px; */
+  text-align: center;
+  margin: 20px;
+}
+
+/* Style for the icon */
+.elementor-icon-box-icon {
+  background-color: #07215c;
+  color: #fff;
+  padding: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.elementor-icon-box-icon svg {
+  width: 30px;
+  height: 30px;
+}
+
+/* Style for the title */
+.elementor-icon-box-title {
+  color: #35b3df;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* Style for the description */
+.elementor-icon-box-description {
+  color: #000;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+/* Style for the button */
+.elementor-icon-box-content a {
+  background-color: #07215c;
+  color: #fff;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 18px;
+  text-decoration: none;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.elementor-icon-box-content a:hover {
+  background-color: #ff8c00;
+}
+
+/* Style for the columns */
+.elementor-col-50 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+}
+
+.elementor-col-50 h5 {
+  color: #35b3df;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.elementor-col-50 p {
+  color: #000;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.elementor-col-50 a {
+  background-color: #07215c;
+  color: #fff;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 18px;
+  text-decoration: none;
+  margin-top: 15px;
+  transition: background-color 0.3s;
+}
+
+.elementor-col-50 a:hover {
+  background-color: #ff8c00;
+}
+
+/* Style for the second column */
+.elementor-col-50:nth-child(2) {
+  background-color: #e8e8e8;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  .elementor-col-50 {
+      margin: 0;
+      padding: 40px 20px;
+  }
+
+  .elementor-col-50 h5 {
+      font-size: 20px;
+  }
+
+  .elementor-col-50 p {
+      font-size: 16px;
+  }
+
+  .elementor-col-50 a {
+      font-size: 16px;
+      padding: 8px 16px;
+  }
+}
+
+.custom-button {
+  display: inline-block;
+  background-color: #ff0000fd;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 18px;
+  text-align: center;
+  margin: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: #035d9c;
+}
  
+/* COntact Page */
+.contact_section {
+  position: relative;
+  background-color: #f9f9f9;
+
+}
+
+.contact_section .detail {
+  margin-top: 5rem;
+  width: 100%;
+  margin-left: 2rem;
+}
+
+.contact_section .detail .head {
+  width: 100%;
+  font-size: 2.2rem;
+  font-family: 'FontAwesome';
+
+}
+
+.contact_section .detail .detail_body {
+  width: max-content;
+  display: flex;
+  border: 2px solid black;
+  box-shadow: 5px 10px rgba(194, 215, 219, 0.7);
+  border-radius: 27px 23px 4px 27px;
+  ;
+}
+
+.contact_section .detail .detail_body .icon {
+  padding: 4px 12px;
+  background-color: #d5d4d4;
+  border-radius: 50%;
+  font-size: 29px;
+
+}
+
+.contact_section .detail .detail_body .body_id {
+  margin: 15px;
+  font-size: 20px;
+}
+
+.contact_section .detail .contact {
+
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.contact_section .detail .contact .head {
+  padding-bottom: 1.5rem;
+}
+
+.contact_section .detail .contact .names .detail_body {
+  margin-bottom: 2rem;
+}
+
+.contact_section .detail .contact .photo {
+  padding: 6px;
+
+}
+
+.contact_section .detail .contact .photo img {
+  width: 80px;
+  height: 80px;
+  border-radius: 20%;
+
+}
+
+.contact_section .detail .names {
+  /* display: flex; */
+  width: 100%;
+  column-count: 2;
+}
+
+.contact_section .heading_container {
+  margin-bottom: 45px;
+}
+
+.contact_section .row {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.contact_section .form_container {
+  padding: 45px;
+}
+
+.contact_section .form_container .form-control {
+  width: 100%;
+  border: none;
+  height: 50px;
+  margin-bottom: 15px;
+  padding-left: 15px;
+  outline: none;
+  color: #101010;
+  border-radius: 0;
+  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.05);
+}
+
+.contact_section .form_container .form-control::-webkit-input-placeholder {
+  color: #565554;
+}
+
+.contact_section .form_container .form-control:-ms-input-placeholder {
+  color: #565554;
+}
+
+.contact_section .form_container .form-control::-ms-input-placeholder {
+  color: #565554;
+}
+
+.contact_section .form_container .form-control::placeholder {
+  color: #565554;
+}
+
+.contact_section .form_container .form-control.message-box {
+  height: 95px;
+}
+
+.contact_section .form_container .btn_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact_section .form_container .btn_box button {
+  border: none;
+  display: inline-block;
+  padding: 12px 55px;
+  background-color: #2c7873;
+  color: #ffffff;
+  border-radius: 0px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  border: 1px solid #2c7873;
+  width: 100%;
+}
+
+.contact_section .form_container .btn_box button:hover {
+  background-color: transparent;
+  color: #2c7873;
+}
+
+.contact_section .img-box {
+  overflow: hidden;
+}
+
+.contact_section .img-box img {
+  min-width: 100%;
+}
