@@ -543,47 +543,89 @@ nav .navbar-brand:hover {
 }
 
 
-/* Advisors Page starts */
-.advisors_section .national-advisors_container {
-  margin: 60px auto;
+/* ......................ADVISORS PAGE STARTS..................... */
+
+.section-header {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  position: relative;
+  padding-bottom: 20px;
 }
 
-.advisors_section h2 {
-  color: #213555;
+.section-header::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 5px;
+  background: rgb(71, 144, 255);
+  bottom: 0;
+  left: calc(50% - 25px);
 }
 
-.advisors_section .box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-color: #213555;
-  border-radius: 5px;
+.section-header h2 {
+    font-size: 36px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: rgb(33, 53, 85);
+}
+
+#speakers {
+  padding: 60px 0 30px 0;
+}
+
+#speakers .speaker {
+  position: relative;
   overflow: hidden;
-  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 349.99px;
+  height: 349.99px;
 }
 
-.advisors_section .box .img-box {
-  width: 100%;
-  /* width: 290px;
-  height: 288px; */
+#speakers .speaker img {
+  width: 349.99px;
+  height: 349.99px;
 }
 
-.advisors_section .box .img-box img {
-  width: 100%;
-  height: 23rem;
-}
-
-.advisors_section .box .detail-box {
-  width: 100%;
-  color: #ffffff;
-  padding: 10px 15px;
+#speakers .speaker .details {
+  background: rgb(33, 53, 85, 0.85);
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  right: 0;
   text-align: center;
+  padding-top: 10px;
+  transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
-/* Advisors Page ends */
+
+#speakers .speaker .details h3 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+#speakers .speaker .details p {
+  color: #fff;
+  font-size: 15px;
+  font-style: italic;
+}
+
+#speakers .speaker .details a {
+  color: #fff;
+}
+
+#speakers .speaker .details a:hover {
+  color: rgb(71, 144, 255);
+}
+
+#speakers .speaker:hover .details {
+  bottom: 0;
+}
+
+/* ......................ADVISORS PAGE ENDS..................... */
 
 
 .contact_section {
