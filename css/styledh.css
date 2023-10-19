@@ -1162,6 +1162,9 @@ right: 0;
   border-right: 1px solid;
   padding-top: 2px;
 }
+
+
+
 /* Define the blinking animation */
 @keyframes blink {
   0% { opacity: 1; }
@@ -1634,8 +1637,8 @@ body {
 
 .custom-button {
   display: inline-block;
-  background-color: #ff0000fd;
-  color: #ffffff;
+  background-color: #1dace5fd;
+  color: white;
   padding: 10px 20px;
   border-radius: 30px;
   font-size: 18px;
@@ -1646,7 +1649,8 @@ body {
 }
 
 .custom-button:hover {
-  background-color: #035d9c;
+  background-color: #ff8c00;
+  color: black;
 }
  
 /* COntact Page */
