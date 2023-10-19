@@ -81,3 +81,16 @@ function myMap() {
 $(document).ready(function () {
     $('select').niceSelect();
 });
+
+const elementToHide = document.querySelector('.header_top');
+
+// Function to check scroll position and hide/show the element
+function handleScroll() {
+  if (window.scrollY > 100) {
+    elementToHide.style.display = 'none';
+  } else {
+    elementToHide.style.display = 'block';
+  }
+}
+
+window.addEventListener('scroll', handleScroll);
