@@ -255,12 +255,12 @@ a:focus {
 }
 
 .custom_nav-container .navbar-nav .nav-item .nav-link {
-  padding: 5px 30px;
+  padding: 5px 13px;
   color: #ffffff;
   text-align: center;
   text-transform: uppercase;
   border-radius: 5px;
-  font-size: 17px;
+  font-size: 15px;
   -webkit-transition: all .3s;
   transition: all .3s;
 }
@@ -1162,9 +1162,6 @@ right: 0;
   border-right: 1px solid;
   padding-top: 2px;
 }
-
-
-
 /* Define the blinking animation */
 @keyframes blink {
   0% { opacity: 1; }
@@ -1637,8 +1634,8 @@ body {
 
 .custom-button {
   display: inline-block;
-  background-color: #1dace5fd;
-  color: white;
+  background-color: #ff0000fd;
+  color: #ffffff;
   padding: 10px 20px;
   border-radius: 30px;
   font-size: 18px;
@@ -1649,8 +1646,7 @@ body {
 }
 
 .custom-button:hover {
-  background-color: #ff8c00;
-  color: black;
+  background-color: #035d9c;
 }
  
 /* COntact Page */
