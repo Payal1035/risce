@@ -37,6 +37,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
+    <style>
+      /* Style the 'TH' labels */
+    ul li::before {
+      content: attr(data-label); /* Display the 'data-label' attribute content */
+      font-weight: bold; /* Make the labels bold */
+      color: rgb(157, 157, 255); /* Change the color of the labels */
+      margin-right: 5px; /* Add some space between label and text */
+    }
+    </style>
 </head>
 
 <body class="sub_page">
@@ -118,20 +127,17 @@
 
                                 </p>
 
-                                <ul style="text-align:left; line-height:26px;">
-
-                                    <li> Water Resources and Environmental Engineering .</li>
-                                    <li> Innovative Construction Materials and Techniques .</li>
-                                    <li> Repair and Rehabilitation of Structures. </li>
-                                    <li> Geotechnical and Geoenvironmental Engineering</li>
-                                    <li> Earthquake and Structural Dynamics.</li>
-                                    <li>Project Management and Sustainable Practices.</li>
-                                    <li> Traffic & Intelligent Transportation System. </li>
-                                    <li> Remote Sensing, GIS/GPS application in Civil
-                                        Engineering Field. </li>
-                                    <li> Green Building Materials and Green
-                                        Manufacturing. </li>
-                                    <li>Case Studies. </li>
+                                <ul style="text-align:left; line-height:26px; list-style-type: none;">
+                                  <li data-label="TH1"> : Earthquake and Structural Dynamics</li>
+                                  <li data-label="TH2"> : Green Building Materials and Green Manufacturing</li>
+                                  <li data-label="TH3"> : Repair and Rehabilitation of Structures</li>
+                                  <li data-label="TH4"> : Innovative Construction Materials and Techniques</li>
+                                  <li data-label="TH5"> : Geotechnical and Geoenvironmental Engineering</li>
+                                  <li data-label="TH6"> : Traffic & Intelligent Transportation System</li>
+                                  <li data-label="TH7"> : Water Resources and Environmental Engineering</li>
+                                  <li data-label="TH8"> :  Remote Sensing, GIS/GPS application in Civil Engineering Field</li>
+                                  <li data-label="TH9"> : Project Management and Sustainable Practices </li>
+                                  <li data-label="TH10"> : Case Studies</li>
                                 </ul>
                                 <!-- <a class="btn" href="#">Read More</a>-->
                             </div>
@@ -188,7 +194,7 @@
                 <a href="">
                   <i class="fa fa-phone" aria-hidden="true"></i>
                   <span>
-                    +01 1234567890
+                    +91 326 235 0495
                   </span>
                 </a>
               </div>
@@ -226,7 +232,7 @@
               <div class="col-lg-4 col-md-6">
                 <div class="info_detail">
                   <h5>
-                    Cordinators
+                    Coordinators
                   </h5>
                   <p>
                     Dr. Abhijeet Anand<br>
