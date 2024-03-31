@@ -223,3 +223,11 @@
     max-width: 1170px;
   }
 }
+
+@media (max-width: 767px) {
+  .hero_bg_box img {
+    width: 100%; /* Example: Adjust the width */
+    height: auto; /* Ensure aspect ratio is maintained */
+    object-fit: cover; /* Maintain image aspect ratio and cover container */
+  }
+}

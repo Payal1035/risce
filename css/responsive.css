@@ -34,7 +34,11 @@
     min-height: auto;
   }
 
-
+  .hero_bg_box img {
+    width: 100% !important; /* Example: Adjust the width */
+    height: auto !important; /* Ensure aspect ratio is maintained */
+    object-fit: cover; /* Maintain image aspect ratio and cover container */
+  }
   .custom_nav-container .navbar-nav {
     padding-top: 15px;
   }
@@ -108,7 +112,6 @@
     margin-top: 1rem;
   }
 }
-
 @media (max-width: 767px) {
   .header_section .header_top .social_box {
     display: none;
@@ -116,6 +119,12 @@
 
   .header_section .header_top .contact_nav a span {
     font-size: 15px;
+  }
+
+  .hero_bg_box img {
+    width: 100% !important; /* Example: Adjust the width */
+    height: auto !important; /* Ensure aspect ratio is maintained */
+    object-fit: cover; /* Maintain image aspect ratio and cover container */
   }
 
   .slider_section .detail-box {
