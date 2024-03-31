@@ -7,6 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <!-- Mobile Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
   <!-- Site Metas -->
   <meta name="keywords" content="" />
   <meta name="description" content="" />
@@ -35,55 +37,99 @@
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
 
+  <style>
+    @keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+/* Apply bouncing animation to the number 4 */
+.bounce {
+  display: inline-block;
+  animation: bounce 5.5s ease-in-out infinite;
+}
+.hero_button {
+  width: 200px; /* Adjust the width as needed */
+  height: 50px; 
+  appearance: none;
+  background-color: #FFFFFF;
+  border-radius: 40em;
+  border-style: none;
+  box-shadow: #ADCFFF 0 -12px 6px inset;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -.24px;
+  margin: 0;
+  outline: none;
+  padding: 1rem 1.3rem;
+  quotes: auto;
+  text-align: center;
+  text-decoration: none;
+  transition: all .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.hero_button:hover {
+  background-color: #FFC229;
+  box-shadow: #FF6314 0 -6px 8px inset;
+  transform: scale(1.125);
+}
+
+.hero_button:active {
+  transform: scale(1.025);
+}
+
+@media (min-width: 768px) {
+  .hero_button {
+    font-size: 1.5rem;
+    padding: .75rem 2rem;
+  }
+}
+
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+  font-size: 60px;
+}
+.waviy span {
+  font-family: 'Alfa Slab One';
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  text-transform: uppercase;
+  animation: waviy 1s infinite;
+  animation-delay: calc(.1s * var(--i));
+  
+}
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}
+  </style>
+
 </head>
 
 <body>
   <div class="hero_area">
     <div class="hero_bg_box">
       <img src="images/BIT-Sindri.jpg" alt="">
+      <div class="overlay"></div>
     </div>
     <!-- header section strats -->
     <header class="header_section">
-      <!-- <div class="header_top">
-        <div class="container-fluid header_top_container">
-
-          <div class="contact_nav">
-            <a href="">
-              <i class="fa fa-map-marker" aria-hidden="true"></i>
-              <span>
-                Location
-              </span>
-            </a>
-            <a href="">
-              <i class="fa fa-phone" aria-hidden="true"></i>
-              <span>
-                Call : +01 123455678990
-              </span>
-            </a>
-            <a href="">
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-              <span>
-                demo@gmail.com
-              </span>
-            </a>
-          </div>
-          <div class="social_box">
-            <a href="">
-              <i class="fa fa-facebook" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-twitter" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-linkedin" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-instagram" aria-hidden="true"></i>
-            </a>
-          </div>
-        </div>
-      </div> -->
-      <div class="header_bottom">
+     <div class="header_bottom">
         <div class="container-fluid">
           <nav class="navbar navbar-expand-lg custom_nav-container ">
             <a class="navbar-brand " href="index.html"> RISCE-2024 </a>
@@ -111,9 +157,10 @@
                   <a class="nav-link" href="team.html"> Organising Committee </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="papersubmit.html"> Paper Submission </a>
+                  <a class="nav-link" href="papersubmit.html"> PAPER SUBMISSION </a>
                 </li>
-                <li class="nav-item dropdown">
+                
+                <!-- <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Workshop
                   </a>
@@ -126,27 +173,14 @@
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="#">Something else here</a></li>
                   </ul>
-                </li>
+                </li> -->
                 <li class="nav-item">
                   <a class="nav-link" href="venue.html"> Venue </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="contact.html">Contact Us</a>
                 </li>
-                <!-- <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    <i class="fa fa-user" aria-hidden="true"></i>
-                    <span>
-                      Login
-                    </span>
-                  </a>
-                </li>
-                <form class="form-inline justify-content-center">
-                  <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                  </button>
-                </form> -->
-              </ul>
+                  </ul>
             </div>
           </nav>
         </div>
@@ -163,22 +197,35 @@
                 <div class="col-lg-10 col-md-11 mx-auto">
                   <div class="detail-box">
                     <h2>
-                      An International conference
+                      An International Conference
                       on <br>
                       <h2><h1>
                       Research and Innovation for Sustainability <br>
                       in <br>
-                      Civil Engineering
+                      Civil Engineering  
+                      <div class="waviy">
+                        <span style="--i:1">2</span>
+                        <span style="--i:2">0</span>
+                        <span style="--i:3">2</span>
+                        <span style="--i:4">4</span>
+                        <!-- <span style="--i:5">E</span> -->
+                       
+                       </div>
+            
+                      <!-- <span class="animated-number">202<span class="bounce">4</span></span> -->
+                      
                     </h1>
                     <p class="quote">
                       Socio-economic and Environmental Approach
                     </p>
-                    <div style="font-weight: 600; color: rgb(53, 219, 245);">Nov. 25-26, 2024 | Department of Civil Engineering, B.I.T. Sindri</div>
-                    <div class="btn-box">
-                      <a href="/contact.html" class="btn1">
+                    <div style="font-weight: 600; color:#e7e7e7;">Nov. 25-26, 2024 | Department of Civil Engineering, B.I.T. Sindri</div>
+                    <div class="hero_button">
+                      <a href="contact.html" class="btn1">
                         Contact Us
                       </a>
                     </div>
+                    <!-- HTML !-->
+
                   </div>
                 </div>
               </div>
@@ -901,7 +948,7 @@ most revered places where Shiva lives.
           <div class="col-lg-4 col-md-6">
             <div class="info_detail">
               <h5>
-                Cordinators
+                Coordinator
               </h5>
               <p>
                 Dr. Abhijit Anand<br>
@@ -964,7 +1011,7 @@ most revered places where Shiva lives.
   <footer class="footer_section">
     <div class="container">
       <p>
-        &copy; <span id="displayYear"></span> Developed by PAYAL, KAKULI & DHARMVEER.
+        &copy; <span id="displayYear"></span> Developed by DHARMVEER, PAYAL & KAKULI.
         <!-- <a href="https://html.design/">Free Html Templates</a> -->
       </p>
     </div>
