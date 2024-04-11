@@ -84,13 +84,31 @@ $(document).ready(function () {
 
 const elementToHide = document.querySelector('.header_top');
 
-// Function to check scroll position and hide/show the element
-function handleScroll() {
-  if (window.scrollY > 100) {
-    elementToHide.style.display = 'none';
-  } else {
-    elementToHide.style.display = 'block';
-  }
-}
 
-window.addEventListener('scroll', handleScroll);
+
+// Function to toggle accordion and change icon
+
+function toggleAccordion(sectionId) {
+    var section = document.getElementById(sectionId);
+    var icon = section.previousElementSibling.querySelector('.toggle-icon');
+  
+    if (section.style.display === 'none' || section.style.display === '') {
+      section.style.display = 'block';
+      icon.textContent = '-';
+    } else {
+      section.style.display = 'none';
+      icon.textContent = '+';
+    }
+  }
+
+  
+  
+// function handleScroll() {
+//     var elementToHide = document.getElementById('elementToHide'); // Replace 'elementToHide' with the appropriate ID
+//     if (window.scrollY > 100) {
+//         elementToHide.style.display = 'none';
+//     } else {
+//         elementToHide.style.display = 'block';
+//     }
+
+// window.addEventListener('scroll', handleScroll);
